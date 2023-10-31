@@ -7,6 +7,10 @@ const handler = NextAuth({
   session: {
     strategy: 'jwt',
   },
+  pages: {
+    // This tells the middleware where to redirect
+    signIn: '/login',
+  },
   providers: [
     CredentialsProvider({
       credentials: {
